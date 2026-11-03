@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 export const Main = () => {
@@ -8,7 +7,7 @@ export const Main = () => {
       id: 1,
       title: "Alemania 1990",
       price: "$85.00",
-      image: "/Alemania.jpg",
+      image: `${import.meta.env.BASE_URL}Alemania.jpg`,
       year: "1990",
       country: "ALEMANIA",
     },
@@ -16,7 +15,7 @@ export const Main = () => {
       id: 2,
       title: "Argentina 1986",
       price: "$90.00",
-      image: "/Argentina.jpg",
+      image: `${import.meta.env.BASE_URL}Argentina.jpg`,
       year: "1986",
       country: "ARGENTINA",
     },
@@ -24,7 +23,7 @@ export const Main = () => {
       id: 3,
       title: "Brasil 1994",
       price: "$80.00",
-      image: "/Brasil.jpg",
+      image: `${import.meta.env.BASE_URL}Brasil.jpg`,
       year: "1994",
       country: "BRASIL",
     },
@@ -35,9 +34,7 @@ export const Main = () => {
 
       {/* PORTADA */}
       <section className="bg-black fg-white py-5 border-bottom border-3 border-primary">
-
         <div className="container py-5 text-center">
-
           <span className="badge theme-warning theme-contrast rounded-0 px-3 py-2 fw-bolder text-uppercase">
             FÚTBOL DE OTRA ÉPOCA
           </span>
@@ -52,13 +49,11 @@ export const Main = () => {
 
           <div className="row justify-content-center">
             <div className="col-12 md:col-8">
-
               <p className="fg-2 lead mb-4">
                 Revive las mejores épocas del fútbol.
                 Encuentra camisetas clásicas de selecciones
                 que marcaron la historia y nunca pasan de moda.
               </p>
-
             </div>
           </div>
 
@@ -68,41 +63,25 @@ export const Main = () => {
           >
             EXPLORAR COLECCIÓN →
           </a>
-
         </div>
-
       </section>
-
 
       {/* FRANJA INFORMATIVA */}
-      <section className=" py-3">
-
+      <section className="py-3">
         <div className="container">
-
           <div className="d-flex justify-content-around align-items-center flex-wrap gap-3 text-center fw-bolder text-uppercase small">
-
-            <span> HISTORIA</span>
-
-            <span> IDENTIDAD</span>
-
-            <span> PASIÓN</span>
-
+            <span>HISTORIA</span>
+            <span>IDENTIDAD</span>
+            <span>PASIÓN</span>
             <span>RETRO FOOTBALL</span>
-
           </div>
-
         </div>
-
       </section>
-
 
       {/* COLECCIÓN DESTACADA */}
       <section id="tienda" className="container py-5">
-
         <div className="d-flex justify-content-between align-items-end flex-wrap gap-3 mb-5">
-
           <div>
-
             <span className="badge theme-info theme-contrast rounded-0 mb-3 px-3 py-2">
               NUESTRA SELECCIÓN
             </span>
@@ -114,21 +93,16 @@ export const Main = () => {
             <p className="fg-2 mb-0">
               Camisetas que hicieron historia.
             </p>
-
           </div>
 
           <span className="fg-warning fw-bolder font-monospace">
             1986 — 1994
           </span>
-
         </div>
-
 
         {/* PRODUCTOS */}
         <div className="row row-cols-1 md:row-cols-2 lg:row-cols-3 g-4">
-
           {featuredProducts.map((product, index) => {
-
             const margin =
               index === 1
                 ? 'lg:mt-3'
@@ -137,14 +111,10 @@ export const Main = () => {
                   : '';
 
             return (
-
               <div className={`col ${margin}`} key={product.id}>
-
                 <article className="card bg-1 border border-2 border-primary rounded-0 shadow-lg h-100 overflow-hidden">
-
                   {/* IMAGEN */}
                   <div className="position-relative">
-
                     <img
                       src={product.image}
                       alt={product.title}
@@ -155,13 +125,10 @@ export const Main = () => {
                     <span className="badge theme-warning theme-contrast rounded-0 position-absolute top-0 start-0 m-3">
                       EDICIÓN RETRO
                     </span>
-
                   </div>
-
 
                   {/* INFORMACIÓN */}
                   <div className="card-body p-4">
-
                     <p className="fg-info small fw-bolder font-monospace mb-2">
                       SELECCIÓN / {product.country}
                     </p>
@@ -177,9 +144,7 @@ export const Main = () => {
                     <hr className="border-primary opacity-75" />
 
                     <div className="d-flex justify-content-between align-items-center mt-3">
-
                       <div>
-
                         <span className="d-block fg-2 small text-uppercase">
                           PRECIO
                         </span>
@@ -187,34 +152,23 @@ export const Main = () => {
                         <span className="fs-4 fw-bolder fg-warning">
                           {product.price}
                         </span>
-
                       </div>
 
                       <span className="badge theme-primary theme-contrast rounded-0 p-2">
                         #{product.id.toString().padStart(2, '0')}
                       </span>
-
                     </div>
-
                   </div>
-
                 </article>
-
               </div>
-
             );
           })}
-
         </div>
-
       </section>
-
 
       {/* MENSAJE FINAL */}
       <section className="bg-black border-top border-3 border-info py-5">
-
         <div className="container text-center py-3">
-
           <h2 className="display-5 fw-bolder text-uppercase fg-info">
             LAS LEYENDAS NUNCA MUEREN.
           </h2>
@@ -222,11 +176,8 @@ export const Main = () => {
           <p className="fg-2 mt-3 mb-0">
             Viste la historia. Representa tu pasión.
           </p>
-
         </div>
-
       </section>
-
     </main>
   );
 };
